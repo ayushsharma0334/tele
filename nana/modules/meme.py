@@ -46,6 +46,34 @@ Convert your text to Vaporwave/Aestethic style.
 -> `3` (typing message)
 """
 
+METOOSTR = [
+    "Me too thanks",
+    "Haha yes, me too",
+    "Same lol",
+    "Me irl",
+    "Same here",
+    "Me bhi lwde, bilkul same",
+    "Haha yes",
+    "Me rn",
+]
+GEETASTR = [
+    "Yo Beb!!",
+    "Hii, lub🥰",
+    "🥰aaaye haaaye",
+    "My Beb Iz proo",
+    "U lob🥰",
+]
+
+@register(outgoing=True, pattern="^.metoo$")
+async def metoo(hahayes):
+    """ Haha yes """
+    await hahayes.edit(choice(METOOSTR))
+
+@register(outgoing=True, pattern="^.geeta$")
+async def geeta(lub):
+    """ You lub """
+    await youlub.edit(choice(GEETASTR))
+
 MOCK_SPONGE = "https://telegra.ph/file/c2a5d11e28168a269e136.jpg"
 
 
